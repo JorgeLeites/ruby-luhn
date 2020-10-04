@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'ruby-luhn'
-  s.version = '0.0.3'
+  s.version = '0.1.0'
   s.required_ruby_version = '>= 2.4'
   s.date = '2011-09-29'
   s.summary = 'A lightweight implementation of the Luhn algorithm'

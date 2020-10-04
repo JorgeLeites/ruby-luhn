@@ -7,9 +7,10 @@ class Luhn
     #
     # @param number [String] the number to calculate the checksum
     # @param base [Integer] the base used to calculate the checksum
+    # @param uppercase [Boolean] if `true` the result will be in upper case
     # @return [String] the checksum of the given number
     # @raise [ArgumentError] if the number is not valid in the chosen base
-    def generate(number, base: 10)
+    def generate(number, base: 10, uppercase: false)
       total = 0
 
       characters = number.split('')
@@ -27,7 +28,8 @@ class Luhn
       end
 
       # Return the value we'd have to sum to the total to have a number divisible by 36
-      (-total % base).to_s(base).upcase
+      result = (-total % base).to_s(base)
+      uppercase ? result.upcase : result
     end
 
     # Checks if the last digit of the number is the checksum of the rest
@@ -37,7 +39,7 @@ class Luhn
     # @return [Boolean] the validity of the checksum
     # @raise [ArgumentError] if the number is not valid in the chosen base
     def validate(number, base: 10)
-      number[-1] == generate(number[0...-1], base: base)
+      number[-1].downcase == generate(number[0...-1], base: base)
     end
 
     private
