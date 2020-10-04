@@ -2,6 +2,8 @@
 
 A lightweight implementation of the Luhn algorithm.
 
+[![Gem Version](https://badge.fury.io/rb/ruby-luhn.svg)](https://badge.fury.io/rb/ruby-luhn)
+
 ## Installation
 
 This gem is available in RubyGems. To install add the following to your Gemfile:

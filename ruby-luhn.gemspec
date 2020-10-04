@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'ruby-luhn'
-  s.version = '0.0.2'
+  s.version = '0.0.3'
   s.required_ruby_version = '>= 2.4'
   s.date = '2011-09-29'
   s.summary = 'A lightweight implementation of the Luhn algorithm'
@@ -11,4 +11,8 @@ Gem::Specification.new do |s|
   ]
   s.require_paths = ['lib']
   s.authors = ['Jorge Leites']
+  s.metadata = {
+    'documentation_uri' => 'https://rubydoc.info/github/JorgeLeites/ruby-luhn',
+    'source_code_uri' => 'https://github.com/JorgeLeites/ruby-luhn'
+  }
 end
