@@ -7,7 +7,7 @@ class Luhn
     #
     # @param number [String] the number to calculate the checksum
     # @param base [Integer] the base used to calculate the checksum
-    # @param uppercase [Boolean] if `true` the result will be in upper case
+    # @param uppercase [Boolean] if +true+ the result will be in upper case
     # @return [String] the checksum of the given number
     # @raise [ArgumentError] if the number is not valid in the chosen base
     def generate(number, base: 10, uppercase: false)
